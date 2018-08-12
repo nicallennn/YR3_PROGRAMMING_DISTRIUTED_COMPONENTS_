@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="na2880g" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=sql-server;Initial Catalog=na2880g;Persist Security Info=True;User ID=na2880g" SettingsObjectName="RouteDistanceLibrary.Properties.Settings" SettingsPropertyName="na2880gConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.lines" Member="lines">
+    <Type Name="line">
+      <Column Name="line_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="line_name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="line_line_information" Member="line_informations" ThisKey="line_id" OtherKey="line_id" Type="line_information" />
+      <Association Name="line_intersection" Member="intersections" ThisKey="line_id" OtherKey="line1_id" Type="intersection" />
+    </Type>
+  </Table>
+  <Table Name="dbo.stations" Member="stations">
+    <Type Name="station">
+      <Column Name="station_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="station_name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="station_line_information" Member="line_informations" ThisKey="station_id" OtherKey="station_id" Type="line_information" />
+      <Association Name="station_intersection" Member="intersections" ThisKey="station_id" OtherKey="station_id" Type="intersection" />
+    </Type>
+  </Table>
+  <Table Name="dbo.line_information" Member="line_informations">
+    <Type Name="line_information">
+      <Column Name="info_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="line_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="station_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="position" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="distance_to_next" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
+      <Column Name="time_to_next" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
+      <Column Name="delay_to_next" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Association Name="line_line_information" Member="line" ThisKey="line_id" OtherKey="line_id" Type="line" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="station_line_information" Member="station" ThisKey="station_id" OtherKey="station_id" Type="station" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.intersections" Member="intersections">
+    <Type Name="intersection">
+      <Column Name="intersect_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="station_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="line1_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="line2_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="line_intersection" Member="line" ThisKey="line1_id" OtherKey="line_id" Type="line" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="station_intersection" Member="station" ThisKey="station_id" OtherKey="station_id" Type="station" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+</Database>

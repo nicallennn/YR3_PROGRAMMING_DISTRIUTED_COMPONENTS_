@@ -1,0 +1,6 @@
+C:\Users\na2880g\source\repos\LiveJourneys_V05\DistanceComponentLibrary\bin\Debug\DistanceComponentLibrary.dll
+C:\Users\na2880g\source\repos\LiveJourneys_V05\DistanceComponentLibrary\bin\Debug\DistanceComponentLibrary.pdb
+C:\Users\na2880g\source\repos\LiveJourneys_V05\DistanceComponentLibrary\obj\Debug\DistanceComponentLibrary.csprojResolveAssemblyReference.cache
+C:\Users\na2880g\source\repos\LiveJourneys_V05\DistanceComponentLibrary\obj\Debug\DistanceComponentLibrary.csproj.CoreCompileInputs.cache
+C:\Users\na2880g\source\repos\LiveJourneys_V05\DistanceComponentLibrary\obj\Debug\DistanceComponentLibrary.dll
+C:\Users\na2880g\source\repos\LiveJourneys_V05\DistanceComponentLibrary\obj\Debug\DistanceComponentLibrary.pdb

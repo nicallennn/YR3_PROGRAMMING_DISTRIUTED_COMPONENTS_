@@ -1,0 +1,10 @@
+C:\Users\na2880g\source\repos\LiveJourneys\Login\bin\Debug\Login.exe.config
+C:\Users\na2880g\source\repos\LiveJourneys\Login\bin\Debug\Login.exe
+C:\Users\na2880g\source\repos\LiveJourneys\Login\bin\Debug\Login.pdb
+C:\Users\na2880g\source\repos\LiveJourneys\Login\obj\Debug\Login.csprojResolveAssemblyReference.cache
+C:\Users\na2880g\source\repos\LiveJourneys\Login\obj\Debug\Login.MainForm.resources
+C:\Users\na2880g\source\repos\LiveJourneys\Login\obj\Debug\Login.Properties.Resources.resources
+C:\Users\na2880g\source\repos\LiveJourneys\Login\obj\Debug\Login.csproj.GenerateResource.Cache
+C:\Users\na2880g\source\repos\LiveJourneys\Login\obj\Debug\Login.csproj.CoreCompileInputs.cache
+C:\Users\na2880g\source\repos\LiveJourneys\Login\obj\Debug\Login.exe
+C:\Users\na2880g\source\repos\LiveJourneys\Login\obj\Debug\Login.pdb
